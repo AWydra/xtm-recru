@@ -74,18 +74,17 @@ const SearchBar = ({ placeholder, value, onChange, onClear, onSubmit, ...props }
             )
           }
         />
-        {onSubmit && (
-          <Button
-            className={classes.button}
-            disableElevation
-            size="large"
-            color="primary"
-            variant="contained"
-            type="submit"
-          >
-            Search
-          </Button>
-        )}
+        <Button
+          className={classes.button}
+          disableElevation
+          size="large"
+          color="primary"
+          variant="contained"
+          type="submit"
+          disabled={!value}
+        >
+          Search
+        </Button>
       </Paper>
     </Box>
   );

@@ -4,5 +4,5 @@ import thunk from 'redux-thunk';
 
 import wikiReducer from 'reducers/wikiReducer';
 
-export const store = createStore(wikiReducer, composeWithDevTools(applyMiddleware(thunk)));
+const store = createStore(wikiReducer, composeWithDevTools(applyMiddleware(thunk)));
 export default store;
